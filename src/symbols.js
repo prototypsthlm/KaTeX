@@ -644,16 +644,34 @@ for (i = 0; i < letters.length; i++) {
 // Latin-1 letters
 for (i = 0x00C0; i <= 0x00D6; i++) {
     ch = String.fromCharCode(i);
+    defineSymbol(math, main, mathord, ch, ch);
     defineSymbol(text, main, textord, ch, ch);
 }
 
 for (i = 0x00D8; i <= 0x00F6; i++) {
     ch = String.fromCharCode(i);
+    defineSymbol(math, main, mathord, ch, ch);
     defineSymbol(text, main, textord, ch, ch);
 }
 
 for (i = 0x00F8; i <= 0x00FF; i++) {
     ch = String.fromCharCode(i);
+    defineSymbol(math, main, mathord, ch, ch);
+    defineSymbol(text, main, textord, ch, ch);
+}
+
+// greek letters
+const lowercaseGreekLetters = "αβγδεϵζηθϑικλμνξοπϖρϱςστυφϕχψω";
+for (let i = 0; i < lowercaseGreekLetters.length; i++) {
+    const ch = lowercaseGreekLetters.charAt(i);
+    defineSymbol(math, main, mathord, ch, ch);
+    defineSymbol(text, main, textord, ch, ch);
+}
+
+const uppercaseGreekLetters = "ΓΔΘΞΠΣΦΨΩ";
+for (let i = 0; i < uppercaseGreekLetters.length; i++) {
+    const ch = uppercaseGreekLetters.charAt(i);
+    defineSymbol(math, main, mathord, ch, ch);
     defineSymbol(text, main, textord, ch, ch);
 }
 

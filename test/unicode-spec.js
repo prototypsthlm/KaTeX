@@ -79,10 +79,6 @@ describe("unicode", function() {
         expect('\\text{ÀàÇçÉéÏïÖöÛû}').toParse();
     });
 
-    it("should not parse Latin-1 outside \\text{}", function() {
-        expect('ÀàÇçÉéÏïÖöÛû').toNotParse();
-    });
-
     it("should parse Cyrillic inside \\text{}", function() {
         expect('\\text{БГДЖЗЙЛФЦШЫЮЯ}').toParse();
     });
