@@ -8936,16 +8936,16 @@ for (i = 0x00F8; i <= 0x00FF; i++) {
 }
 
 // greek letters
-const lowercaseGreekLetters = "αβγδεϵζηθϑικλμνξοπϖρϱςστυφϕχψω";
+var lowercaseGreekLetters = "αβγδεϵζηθϑικλμνξοπϖρϱςστυφϕχψω";
 for (i = 0; i < lowercaseGreekLetters.length; i++) {
-    const ch = lowercaseGreekLetters.charAt(i);
+    ch = lowercaseGreekLetters.charAt(i);
     defineSymbol(math, main, mathord, ch, ch);
     defineSymbol(text, main, textord, ch, ch);
 }
 
-const uppercaseGreekLetters = "ΓΔΘΞΠΣΦΨΩ";
+var uppercaseGreekLetters = "ΓΔΘΞΠΣΦΨΩ";
 for (i = 0; i < uppercaseGreekLetters.length; i++) {
-    const ch = uppercaseGreekLetters.charAt(i);
+    ch = uppercaseGreekLetters.charAt(i);
     defineSymbol(math, main, mathord, ch, ch);
     defineSymbol(text, main, textord, ch, ch);
 }
